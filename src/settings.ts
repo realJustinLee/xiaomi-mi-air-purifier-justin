@@ -6,4 +6,4 @@ export const ACCESSORY_NAME = 'XiaomiMiAirPurifier';
 /**
  * This must match the name of your plugin as defined the package.json
  */
-export const PLUGIN_NAME = 'homebridge-xiaomi-mi-air-purifier';
+export const PLUGIN_NAME = 'homebridge-xiaomi-mi-air-purifier-justin';

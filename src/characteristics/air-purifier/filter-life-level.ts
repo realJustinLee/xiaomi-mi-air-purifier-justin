@@ -1,19 +1,19 @@
-import { Service, Characteristic, CharacteristicEventTypes } from 'homebridge';
+import {Service, Characteristic, CharacteristicEventTypes} from 'homebridge';
 
 // https://developers.homebridge.io/#/characteristic/FilterLifeLevel
 export function add(
-  maybeDevice: Promise<any>,
-  service: Service,
-  characteristic: typeof Characteristic.FilterLifeLevel,
+    maybeDevice: Promise<any>,
+    service: Service,
+    characteristic: typeof Characteristic.FilterLifeLevel,
 ) {
-  maybeDevice.then((device) => {
-    device.on('filterLifeChanged', (value: number) => {
-      service.updateCharacteristic(characteristic, value);
+    maybeDevice.then((device) => {
+        device.on('filterLifeChanged', (value: number) => {
+            service.updateCharacteristic(characteristic, value);
+        });
     });
-  });
 
-  return service.getCharacteristic(characteristic).onGet(async () => {
-    const device = await maybeDevice;
-    return await device.filterLifeLevel();
-  });
+    return service.getCharacteristic(characteristic).onGet(async () => {
+        const device = await maybeDevice;
+        return await device.filterLifeLevel();
+    });
 }

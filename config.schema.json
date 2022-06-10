@@ -62,11 +62,16 @@
     }
   },
   "layout": [
-    { "key": "name" },
+    {
+      "key": "name"
+    },
     {
       "type": "flex",
       "flex-flow": "row wrap",
-      "items": ["address", "token"]
+      "items": [
+        "address",
+        "token"
+      ]
     },
     {
       "type": "help",
@@ -78,9 +83,15 @@
       "expandable": true,
       "expanded": true,
       "items": [
-        { "key": "enableAirQuality" },
-        { "key": "enableTemperature" },
-        { "key": "enableHumidity" }
+        {
+          "key": "enableAirQuality"
+        },
+        {
+          "key": "enableTemperature"
+        },
+        {
+          "key": "enableHumidity"
+        }
       ]
     },
     {
@@ -89,9 +100,15 @@
       "expandable": true,
       "expanded": false,
       "items": [
-        { "key": "filterChangeThreshold" },
-        { "key": "enableFanSpeedControl" },
-        { "key": "enableChildLockControl" }
+        {
+          "key": "filterChangeThreshold"
+        },
+        {
+          "key": "enableFanSpeedControl"
+        },
+        {
+          "key": "enableChildLockControl"
+        }
       ]
     }
   ]
